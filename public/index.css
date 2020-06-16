@@ -1,0 +1,32 @@
+.first {
+  font-family: 'Fredoka One';
+  font-size:32px;
+  text-align: center;
+  color: '#3c3c3c';
+}
+
+.titleText{
+  font-family: 'Fredoka One';
+  font-size: 22px;
+  color: '#3c3c3c';
+}
+
+.text{
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: '#3c3c3c';
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(201,132,116,1) 0%, rgba(199,199,199,1) 35%, rgba(255,255,255,1) 100%);
+}
+

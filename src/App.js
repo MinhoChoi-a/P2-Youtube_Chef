@@ -8,6 +8,8 @@ import { VideoDetail, VideoList, Icons } from './components';
 
 import youtube from './api/youtube';
 
+import {apiKey} from './credential/API';
+
 class App extends React.Component {
   
   state = {
@@ -32,7 +34,7 @@ class App extends React.Component {
     params: {
       part: 'snippet',
       maxResults: 10,
-      key: 'AIzaSyBb7SwJSFqg6mvVHw_py1mll2Lf8asD_RY',
+      key: apiKey,
       type: 'video',
       q: searchTerm
   

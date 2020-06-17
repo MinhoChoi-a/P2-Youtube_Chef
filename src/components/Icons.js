@@ -1,11 +1,8 @@
 import React from 'react';
 
-import { AppBar, Toolbar, IconButton, Grid, Button, Typography} from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Grid, Button, Typography, Drawer } from '@material-ui/core';
 
-import Drawer from '@material-ui/core/Drawer';
-
-
-/**
+/** Styles sample code
 const useStyles = makeStyles({
   root: {
     background: (props) =>
@@ -87,22 +84,20 @@ class Icons extends React.Component {
       }
   }
   
-  toggleDrawer = booleanValue => () => {
-    this.setState({
-      drawerOpened: booleanValue
-    });
-  };
+    toggleDrawer = booleanValue => () => {
+      this.setState({
+        drawerOpened: booleanValue
+      });
+    };
 
     handle = async (value) => {
         
-    await this.setState({ searchTerm: value, drawerOpened: false, title: value.substr(0,value.indexOf(' '))});
+      await this.setState({ searchTerm: value, drawerOpened: false, title: value.substr(0,value.indexOf(' '))});
 
-    const { searchTerm } = this.state;
-    const { onFormSubmit } = this.props;
-    
-    console.log(searchTerm);
-
-    onFormSubmit(searchTerm);
+      const { searchTerm } = this.state;
+      const { onFormSubmit } = this.props;
+      
+      onFormSubmit(searchTerm);
 
     }
     
@@ -133,7 +128,7 @@ class Icons extends React.Component {
               >
             <Button 
               style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>
-              MINHO CHOI PROJECT
+              MINHOCHOI PROJECT
             </Button>
             </Grid>
             </Toolbar>
@@ -176,40 +171,6 @@ class Icons extends React.Component {
         </div>
       );
     }
+ }
 
-
- 
- 
-  
-          /**
-
-          <Grid container direction="row" justify="center" alignItems="center">
-            <FormControl>
-            <RadioGroup aria-label="contained primary button group">
-                <Grid xs="12">
-                <StyleLabel value="korean food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="KOREA"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="canadian food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="CANADA"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="chinese food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="CHINA"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="philippine food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="PHILLIPPINES"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="indonesia food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="INDONESIA"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="italy food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="ITALY"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="france food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="FRANCE"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="mexico food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="MEXICO"
-                control={<StyleRadio/>}/>
-                <StyleLabel value="brazil food receipe" onChange = { e => this.handle(e.currentTarget.value) } label="BRAZIL"
-                control={<StyleRadio/>}/>
-                </Grid>
-            </RadioGroup>
-            </FormControl>
-              </Grid>
-        
-         */
-  }
-export default Icons;
+ export default Icons;

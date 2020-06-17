@@ -3,8 +3,6 @@ import React from 'react';
 import { Grid, Container } from '@material-ui/core';
 
 import { VideoDetail, VideoList, Icons } from './components';
-//import VideoDetail from './components/VideoDetail';
-//import { VideoList } from './components/VideoList';
 
 import youtube from './api/youtube';
 
@@ -52,7 +50,7 @@ class App extends React.Component {
       <Container fixed>
         <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{maxWidth: 1920, height: '90vh'}}>
           
-          <Grid item xs={12}>
+          <Grid item sm={12} xs={12}>
             <Icons onFormSubmit={this.handleSubmit}/>
           </Grid>
           
@@ -68,7 +66,6 @@ class App extends React.Component {
     )
   }
 }
-
 
 export default App;
 

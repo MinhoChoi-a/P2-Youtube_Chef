@@ -151,22 +151,74 @@ class VideoDetail extends React.Component {
                 </React.Fragment>
             )}
             
-        else if(term === "CANADA food receipe") {
-            
+        else if(term === "CANADA food receipe" || term ==="canada poutine receipe" || term ==="canada ginger beef receipe" || term ==="canada Montreal style bagels receipe"
+        || term ==="canada butter tart receipe" || term ==="canada inuit bannock receipe" || term ==="canada akutaq receipe") 
+        
+        {
             return ( 
-                <React.Fragment>
-                    <Box display='flex' style={{height:'70vh'}}>
+            <React.Fragment>
+                <Box display='flex' style={{height:'70%'}}>
                     <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                    <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{marginTop:'5%'}}>
-                        <Typography variant='subtitle2'>This is Canada</Typography>
+                        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{padding:'20px'}}>
+                            <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Canadian Cuisine</Typography>
+                            <p className="text">Canadian cuisine varies widely depending on the regions of the nation. 
+                            The four earliest cuisines of Canada have First Nations, English, Scottish and French roots, with the traditional cuisine of English Canada closely related to British cuisine, 
+                            while the traditional cuisine of French Canada has evolved from French cuisine and the winter provisions of fur traders. 
+                            With subsequent waves of immigration in the 19th and 20th century from Central, Southern, and Eastern Europe, South Asia, East Asia, and the Caribbean, 
+                            the regional cuisines were subsequently augmented.</p>
                         
-                    </Grid>
+                            <TableContainer component={Paper} style={{height:'100%', width:'90%'}}>
+                                <StyleTable className="canadafood" aria-label="canadafood">
+                                    <TableBody>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <Button value="canada poutine receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/canada/poutine.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="canada ginger beef receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/canada/beef.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="canada Montreal style bagels receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/canada/mont.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="canada butter tart receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/canada/butter.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="canada inuit bannock receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/canada/inuit.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="canada akutaq receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/canada/akutaq.jpg')}/>
+                                                </Button></StyleTableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Poutine</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Ginger Beef</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Montreal-Style Bagels</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Butter-tart</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Inuit Bannock</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Akutaq</p></StyleTableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </StyleTable>
+                            </TableContainer>
+                        </Grid>
                     </Paper>
-                    </Box>
-                </React.Fragment>
-                )
-            }
-
+                </Box>
+            </React.Fragment>
+        )}
+        
         else if(term === "CHINA food receipe") {
     
             return ( 

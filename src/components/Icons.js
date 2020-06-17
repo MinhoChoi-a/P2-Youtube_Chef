@@ -84,7 +84,7 @@ class Icons extends React.Component {
       }
   }
   
-    toggleDrawer = booleanValue => () => {
+    toggledrawer = booleanValue => () => {
       this.setState({
         drawerOpened: booleanValue
       });
@@ -113,7 +113,7 @@ class Icons extends React.Component {
               edge="start"
               color="inherit"
               aria-label="Menu"
-              onClick={this.toggleDrawer(true)}
+              onClick={this.toggledrawer(true)}
             >
             <Typography style={{fontFamily: 'Fredoka One', color: '#3C3C3C', fontSize: '30px'}}>
               {title}
@@ -137,32 +137,31 @@ class Icons extends React.Component {
         <Drawer
           anchor="left"
           open={this.state.drawerOpened}
-          onClose={this.toggleDrawer(false)}
-          toggleDrawer={this.toggleDrawer}
+          onClose={this.toggledrawer(false)}
           ModalProps={{
             keepMounted: true}}
           >
         
-            <div onKeyDown={this.toggleDrawer(false)} style={{width:'200px', padding:'20px'}}>
-              <Grid container class="iconButton "direction="row" justify="left" alignItems="center" spacing={1} style={{width:'100%'}}>
+            <div onKeyDown={this.toggledrawer(false)} style={{width:'200px', padding:'20px'}}>
+              <Grid container className="iconButton "direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
               <Button value="KOREA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}> KOREA </Button>
               </Grid>
-              <Grid container direction="row" justify="left" alignItems="center" spacing={1} style={{width:'100%'}}>
+              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
               <Button value="CANADA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}>CANADA </Button>
               </Grid>
-              <Grid container direction="row" justify="left" alignItems="center" spacing={1} style={{width:'100%'}}>
+              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
               <Button value="CHINA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}>CHINA </Button>
               </Grid>
-              <Grid container direction="row" justify="left" alignItems="center" spacing={1} style={{width:'100%'}}>
+              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
               <Button value="PHILIPPINES food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>PHILIPPINES </Button>
               </Grid>
-              <Grid container direction="row" justify="left" alignItems="center" spacing={1} style={{width:'100%'}}>
+              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
               <Button value="INDONESIA food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>INDONESIA </Button>
               </Grid>
-              <Grid container direction="row" justify="left" alignItems="center" spacing={1} style={{width:'100%'}}>
+              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
               <Button value="ITALY food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>ITALY </Button>
               </Grid>
-              <Grid container direction="row" justify="left" alignItems="center" spacing={1} style={{width:'100%'}}>
+              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
               <Button value="FRANCE food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>FRANCE </Button>
               </Grid>
            </div>

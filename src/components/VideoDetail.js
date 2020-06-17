@@ -57,7 +57,7 @@ class VideoDetail extends React.Component {
                         <Paper elevation={6} style={{height:'100%', width:'100%', backgroundImage: `url(${backImage})`, backgroundSize: "cover", padding:"20px"}}>
                             
                             <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{width:'100%', marginTop: '20px'}}>
-                            <Typography class="first">Welcome to Youtube Chef</Typography></Grid>
+                            <p className="first">Welcome to Youtube Chef</p></Grid>
                             
                             <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{width:'100%', marginTop: '10px', marginBottom:-20}}>
                             <p className="titleText">Select the country you want<br/>Click Youtube video and Try</p>

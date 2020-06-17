@@ -1,0 +1,69 @@
+/*lab1.css - stylesheet examples*/
+
+
+
+body
+{
+background-color: #ebfefe;
+
+}
+
+nav
+{
+	font-family: Arial, Helvetica;
+	font-weight: bold;
+	color: #00FF00;
+}
+
+h1
+{
+	font-family: Arial, Helvetica;
+	font-style: italic;
+	color: #400080;
+}
+
+h3
+{
+	font-family: Arial, Helvetica;
+	font-style: italic;
+	color: #400080;
+}
+
+p
+{
+ 	font-family: Arial, Helvetica;
+	color: #c0c0c0;
+}
+
+details
+{
+	font-family: Arial, Helvetica;
+	font-weight: bold;
+	color: #c0c0c0;
+}
+
+table
+{
+	font-family: Arial, Helvetica;
+	font-weight: bold;
+	color: #c0c0c0;
+}
+
+fieldset
+{
+	font-family: Arial, Helvetica;
+	font-weight: bold;
+	color: #c0c0c0;
+}
+
+input
+{
+	font-family: Arial, Helvetica;
+	font-weight: bold;
+	color: #c0c0c0;
+}
+
+a:hover
+{
+	color: grey;
+}

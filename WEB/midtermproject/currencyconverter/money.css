@@ -1,0 +1,153 @@
+.head
+{
+    width: 80%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: lightgray;
+    position: relative;
+    }
+
+
+
+.content{
+    width: 80%;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.020343171448266806) 0%, rgba(248,250,120,1) 96%, rgba(224,251,108,1) 100%);
+    position: relative;}
+  
+    h1
+    {
+    font-family: 'roboto', 'open-sans', 'arial';
+    font-size: 30px;
+    text-align: left;
+    color: white;
+    padding-top: 30px;
+    padding-left: 30px;
+    }
+    
+    h3
+    {
+    font-family: 'roboto', 'open-sans', 'arial';
+    font-size: 20px;
+    text-align: left;
+    color: black;
+    padding-top: 10px;
+    padding-left: 30px;
+    }
+
+    table
+    {
+    font-family: 'roboto', 'open-sans', 'arial';
+    font-size: 15px;
+    text-align: left;
+    color: black;
+    padding-top: 10px;
+    padding-left: 20px;
+    }
+
+    select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 15px;
+    background: lightgray;
+    color: black;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  }
+
+  select:focus {
+    background-image:
+      linear-gradient(45deg, green 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, green 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+  }
+  
+      
+    #amount {
+    width: 175px;
+    display: inline-block;
+    position: relative;
+    font-family: 'roboto', 'open-sans', 'arial';
+    font-size: 15px;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: lightgray;
+    color: black;
+    }
+
+    #converted {
+      width: 175px;
+      display: inline-block;
+      position: relative;
+      font-family: 'roboto', 'open-sans', 'arial';
+      font-size: 15px;
+      padding: 10px 15px;
+      outline: 0;
+      border: 0;
+      border-radius: 0;
+      background: lightgray;
+      color: black;}
+
+      #ratio {
+        width: 175px;
+        display: inline-block;
+        position: relative;
+        font-family: 'roboto', 'open-sans', 'arial';
+        font-size: 15px;
+        padding: 10px 15px;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+        background: lightgray;
+        color: black;}
+
+.foot
+{
+    width: 80%;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: lightgray;
+}
+    
+   

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+
+<link href="money.css" rel="stylesheet" type="text/css">
+
+<script src="money.js"></script>
+
+<title>Calculation</title>
+
+</head>
+
+<body>
+
+<div class="head">
+<h1>Currency Calculator</h1>
+</div>
+
+<div class = "content">
+<h3>Put the amount and select what you want</h3>
+
+<div class="input">
+
+<table>
+  <tr><td>Amount</td>
+<td><input type="text" id="amount"onchange="convertFunction()"></td></tr>
+    <tr><td>from</td>
+    <td><select id="from" onchange="convertFunction()">
+      <option value="0">Select currency:</option>
+      <option value="1">Euro</option>
+      <option value="2">US Dollar</option>
+      <option value="3">UK Pound Sterling</option>
+      <option value="4">Japanese Yen</option>
+      <option value="5">Canadian Dollar</option>
+      </select></td>
+  </tr>
+
+  <tr><td>To</td>
+    <td>
+    <select id="to" onchange="convertFunction()">
+      <option value="0">Select currency:</option>
+      <option value="1">Euro</option>
+      <option value="2">US Dollar</option>
+      <option value="3">UK Pound Sterling</option>
+      <option value="4">Japanese Yen</option>
+      <option value="5">Canadian Dollar</option>
+      </td>
+    </select></tr>
+
+    <tr><td>Converted</td>
+<td><input type="text" id="converted"></td> </tr>
+<tr><td>Ratio</td><td><input type="text" id="ratio"></td></tr>
+</div>
+</table>
+</div>
+</div>
+<div class="foot">
+<h1>2020 Minho Choi Rights Reserved</h1>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+
+<link href="backery.css" rel="stylesheet" type="text/css">
+
+<script src="backeryCake.js"></script>
+
+<title>backery</title>
+
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="head">
+        <div id="title">New City Backery</div><h5>1301-16 Avenue NW, Calgary AB, T2M 0L4</h5><h5>+1 111-111-1111</h5></div>
+        
+        <div class="back">
+        <form onsubmit="checkOrder(); return false">
+        <table class="t1">
+        <tr>
+            <th>First Name</th>
+            <th><input type="Text" id="fname" autofocus size="30" maxlength="25"
+                placeholder="Minho" pattern="[A-Za-z-\s]+" required></th>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <th><input type="Text" id="lname" size="30" maxlength="25"
+                placeholder="Choi" pattern="[A-Za-z-\s]+" required></th>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <th><input type="Text" id="address" size="30" maxlength="30" required></th>
+        </tr>
+        <tr>
+            <th>Postal Code</th>
+            <th><input type="Text" id ="pcode" size="30" maxlength="25"
+                 placeholder= "T2T 2T2" pattern="[A-Za-z1-9\s]+" required></th>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <th><input type="Tel" id ="phone" size="20" maxlength="20"
+                placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required></th>
+        </tr>
+        <tr>
+            <th>E-mail</th>
+            <th><input type="email" id="email" size="30" maxlength="30"
+                placeholder="minho@canada.com" required></th>
+        </table>
+
+
+<table id="cakeSelect">
+    <tr>
+    <th><input type="radio" id="sheet" name="cake" value="sheet" onclick="cakeSize()">Sheet cakes</th>
+    <th><input type="radio" id="round" name="cake" value="round" onclick="cakeSize()">Round cakes</th>
+    </tr>
+</table>
+
+<table id= setSize>
+    <tr>
+    </tr>
+</table>
+
+<table id= addChoice>
+    <tr><th><input type="checkbox" id="Choice" value="5">Cream Cheese Icing $5</th></tr>
+    <tr><th><input type="checkbox" id="Choice" value="7">Fruit and Almonds Topping $7</th></tr>
+    <tr><th><input type="checkbox" id="Choice" value="4">Fruit Jam filling between layers $4</th></tr>
+</table>
+
+<div class ="icon">
+<input class="form" type="submit" value="Add" onsubmit="checkOrder()">
+<input class="form" type="reset" value="Reset">
+</div>
+</form > 
+</div>
+
+</div>
+</body>

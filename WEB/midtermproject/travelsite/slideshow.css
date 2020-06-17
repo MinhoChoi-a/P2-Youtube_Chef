@@ -1,0 +1,176 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.background
+{
+    opacity:1;
+    position:relative;
+    width: 100%;
+    height:100%;
+}
+
+.background:before{
+    position: absolute;
+    background-image: url('photos/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity:0.5;
+    z-index: -1;
+    width:100%;
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    content:"";
+}
+
+.head
+{
+    width: 900px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+   
+    background-image: url('photos/google.png');
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    background-position-x: 90%;
+    position: relative;
+    }
+
+#title
+{
+    font-family: 'Raleway', 'open-sans', 'arial';
+    font-weight: lighter;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.content
+{
+    width: 80%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+#frame
+{
+    height: 350px;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text 
+{
+    height: 50px;
+    width: 460px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imageName
+{
+    font-family: 'Raleway', 'open-sans', 'arial';
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+img.top
+{
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   animation: fade 1.5s ease-in-out;  
+}
+
+img.bottom
+{
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   
+}
+
+img.topS
+{
+   height: 100%;
+   width: 100%;
+   position: absolute;
+  
+}
+
+img.bottomS
+{
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   
+}
+
+
+h3
+{
+   font-family: 'Raleway', 'open-sans', 'arial';
+
+}
+
+
+.foot
+{
+    width: 900px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+   
+    background-image: url('photos/google.png');
+    background-repeat: no-repeat;
+    background-position-y: -270px;
+    background-position-x: 90%;
+    }
+
+#address
+{
+    font-family: 'Raleway', 'open-sans', 'arial';
+    color:black;
+    padding-top:10px;
+    padding-left: 20px;
+}
+
+#sait
+{
+    font-family: 'Raleway', 'open-sans', 'arial';
+    color: black;
+    padding-top:10px;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+
+@keyframes fade {
+    0%{
+        opacity:1;
+    }
+
+100%{
+    opacity:0;
+}
+}

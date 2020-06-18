@@ -219,21 +219,70 @@ class VideoDetail extends React.Component {
             </React.Fragment>
         )}
         
-        else if(term === "CHINA food receipe") {
-    
+        else if(term === "CHINA food receipe" || term ==="china lion's head with crab meat receipe" || term ==="china Làzǐ Jī receipe" || term ==="china Stir-fried razor shell receipe"
+        || term ==="china Steamed whole perch receipe" || term ==="china Sanbeiji receipe" || term ==="china baozi receipe") 
+        
+        {
             return ( 
-                <React.Fragment>
-                    <Box display='flex' style={{height:'70vh'}}>
+            <React.Fragment>
+                <Box display='flex' style={{height:'70%'}}>
                     <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                    <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{marginTop:'5%'}}>
-                        <Typography variant='subtitle2'>This is China</Typography>
+                        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{padding:'20px'}}>
+                            <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Chinese Cuisine</Typography>
+                            <p className="text">Chinese cuisine is an important part of Chinese culture, which includes cuisine originating from the diverse regions of China, as well as from Overseas Chinese who have settled in other parts of the world. Because of the Chinese diaspora and historical power of the country, Chinese cuisine has influenced many other cuisines in Asia, with modifications made to cater to local palates. Chinese food staples such as rice, soy sauce, noodles, tea, and tofu, and utensils such as chopsticks and the wok, can now be found worldwide.</p>
                         
-                    </Grid>
+                            <TableContainer component={Paper} style={{height:'100%', width:'90%'}}>
+                                <StyleTable className="chinafood" aria-label="chinafood">
+                                    <TableBody>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <Button value="china lion's head with crab meat receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/china/lion.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="china Làzǐ Jī receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/china/lazi.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="china baozi receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/china/baozi.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="china Stir-fried razor shell receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/china/stir.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="china Steamed whole perch receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/china/perch.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="china Sanbeiji receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/china/san.jpg')}/>
+                                                </Button></StyleTableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Lion's head with crab meat</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Laziji</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Baozi</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Stir-fried razor shell</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Steamed whole perch</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Sanbeiji</p></StyleTableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </StyleTable>
+                            </TableContainer>
+                        </Grid>
                     </Paper>
-                    </Box>
-                </React.Fragment>
-                )
-            }
+                </Box>
+            </React.Fragment>
+        )}
+        
         
         else if(term === "PHILIPPINES food receipe") {
 

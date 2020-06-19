@@ -284,22 +284,70 @@ class VideoDetail extends React.Component {
         )}
         
         
-        else if(term === "PHILIPPINES food receipe") {
-
+        else if(term === "PHILIPPINES food receipe" || term ==="philippines pinakbet receipe" || term ==="philippines tapsilog receipe" || term ==="philippines puto receipe"
+        || term ==="philippines kare-kare receipe" || term ==="philippines crispy pata receipe" || term ==="philippines Ensaladang Lato receipe") 
+        
+        {
             return ( 
-                <React.Fragment>
-                    <Box display='flex' style={{height:'70vh'}}>
+            <React.Fragment>
+                <Box display='flex' style={{height:'70%'}}>
                     <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                    <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{marginTop:'5%'}}>
-                        <Typography variant='subtitle2'>This is Philippine</Typography>
+                        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{padding:'20px'}}>
+                            <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Filipino Cuisine</Typography>
+                            <p className="text">Filipino cuisine (Filipino: lutuing Pilipino/pagkaing Pilipino) is composed of the cuisines of more than a hundred distinct ethno-linguistic groups found throughout the Philippine archipelago. However, a majority of mainstream Filipino dishes that compose Filipino cuisine are from the cuisines of the various ethnolinguistic groups and tribes of the archipelago, including the Ilocano, Pangasinan, Kapampangan, Tagalog, Bicolano, Visayan (Cebuano, Hiligaynon and Waray), Chavacano and Maranao ethno-linguistic groups. The style of food making and the food associated with it have evolved over many centuries from their Austronesian origins (shared with Malaysian and Indonesian cuisines) to a mixed cuisine of Indian, Chinese, Spanish and American influences, in line with the major waves of influence that had enriched the cultures of the archipelago, as well as others adapted to indigenous ingredients and the local palate.</p>
                         
-                    </Grid>
+                            <TableContainer component={Paper} style={{height:'100%', width:'90%'}}>
+                                <StyleTable className="philippinesfood" aria-label="philippinesfood">
+                                    <TableBody>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines pinakbet receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/pina.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines tapsilog receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/tapsilog.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines puto receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/puto.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines kare-kare receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/kare.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines crispy pata receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/pata.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines Ensaladang Lato receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/lato.jpg')}/>
+                                                </Button></StyleTableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Pinakbet</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Tapsilog</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Puto</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Kare-kare</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Crispy Pata</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Ensaladang Lato </p></StyleTableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </StyleTable>
+                            </TableContainer>
+                        </Grid>
                     </Paper>
-                    </Box>
-                </React.Fragment>
-                )
-            }
-    
+                </Box>
+            </React.Fragment>
+        )}
+        
         else if(term === "INDONESIA food receipe") {
 
             return ( 

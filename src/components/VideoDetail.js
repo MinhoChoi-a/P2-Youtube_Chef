@@ -16,6 +16,7 @@ import backImage from '../image/back.jpeg';
 
 const StyleTable = styled.div`
       padding: 0;
+      
     `;
 
     /**
@@ -77,9 +78,9 @@ class VideoDetail extends React.Component {
         if(!video) {
             return ( 
                 <React.Fragment>
-                    <Box display='flex' style={{height:'80vh', width: '100%'}}>
+                    <Box display='flex'>
                         <Paper elevation={6} 
-                        style={{backgroundImage: `url(${backImage})`, backgroundSize: "cover", padding:"20px", textAlign:"center"}}>
+                        style={{height:'80vh', width: '100%', backgroundImage: `url(${backImage})`, backgroundSize: "cover", padding:"20px", textAlign:"center"}}>
                             
                             <p className="first">Welcome to Youtube Chef</p>
                             <p className="titleText">Select the country you want<br/>Click Youtube video and Try</p>
@@ -88,10 +89,10 @@ class VideoDetail extends React.Component {
                         </Paper>
                     </Box>
                 
-                    <Box display='flex' style={{position: 'realtive', width: '100%'}}>
+                    <Box display='flex'>
                         <Paper elevation={6} 
                         style={{height:'40px', width:'100%', marginTop: '10px'}}>
-                            <Grid container style={{height: '40px', backgroundColor: '#C98474', padding: '10px', color:'white'}}>
+                            <Grid container style={{height: '40px', backgroundColor: '#C98474', padding: '10px'}}>
                                 <Typography style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>
                                     Powered by YOUTUBE + WIKIPEDIA
                                 </Typography>
@@ -108,16 +109,17 @@ class VideoDetail extends React.Component {
             {
                 return ( 
                 <React.Fragment>
-                    <Box display='flex' style={{height:'70%'}}>
-                        <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                            <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{padding:'20px'}}>
-                                <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Korean Cuisine</Typography>
+                    <Box display='flex'>
+                        <Paper className="title" elevation={6}>
+                            <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Korean Cuisine</Typography>
+                            
+                            <Paper className="cuisine-text" elavation={0}>
                                 <p className="text">Korean cuisine is largely based on rice, vegetables, and (at least in the South) meats. 
                                     Traditional Korean meals are named for the number of side dishes (반찬; 飯饌; banchan) that accompany steam-cooked short-grain rice. 
                                     Kimchi is served at nearly every meal. Commonly used ingredients include sesame oil, doenjang (fermented bean paste), soy sauce, salt, garlic, ginger, gochutgaru (pepper flakes), gochujang (fermented red chili paste) 
-                                    and napa cabbage.</p>
+                                    and napa cabbage.</p></Paper>
                             
-                                <TableContainer component={Paper} style={{height:'100%', width:'90%'}}>
+                                <TableContainer className="rep-cuisine" component={Paper}>
                                     <StyleTable className="kfood" aria-label="kfood">
                                         <TableBody>
                                             <TableRow>
@@ -163,7 +165,7 @@ class VideoDetail extends React.Component {
                                         </TableBody>
                                     </StyleTable>
                                 </TableContainer>
-                            </Grid>
+                        
                         </Paper>
                     </Box>
                 </React.Fragment>
@@ -175,17 +177,18 @@ class VideoDetail extends React.Component {
         {
             return ( 
             <React.Fragment>
-                <Box display='flex' style={{height:'70%'}}>
-                    <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{padding:'20px'}}>
+                <Box display='flex'>
+                        <Paper className="title" elevation={6}>
                             <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Canadian Cuisine</Typography>
+                            
+                            <Paper className="cuisine-text" elavation={0}>
                             <p className="text">Canadian cuisine varies widely depending on the regions of the nation. 
                             The four earliest cuisines of Canada have First Nations, English, Scottish and French roots, with the traditional cuisine of English Canada closely related to British cuisine, 
                             while the traditional cuisine of French Canada has evolved from French cuisine and the winter provisions of fur traders. 
                             With subsequent waves of immigration in the 19th and 20th century from Central, Southern, and Eastern Europe, South Asia, East Asia, and the Caribbean, 
-                            the regional cuisines were subsequently augmented.</p>
+                            the regional cuisines were subsequently augmented.</p></Paper>
                         
-                            <TableContainer component={Paper} style={{height:'100%', width:'90%'}}>
+                            <TableContainer className="rep-cuisine" component={Paper}>
                                 <StyleTable className="canadafood" aria-label="canadafood">
                                     <TableBody>
                                         <TableRow>
@@ -231,8 +234,7 @@ class VideoDetail extends React.Component {
                                     </TableBody>
                                 </StyleTable>
                             </TableContainer>
-                        </Grid>
-                    </Paper>
+                        </Paper>
                 </Box>
             </React.Fragment>
         )}
@@ -243,13 +245,15 @@ class VideoDetail extends React.Component {
         {
             return ( 
             <React.Fragment>
-                <Box display='flex' style={{height:'70%'}}>
-                    <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{padding:'20px'}}>
+               <Box display='flex'>
+                        <Paper className="title" elevation={6}>
                             <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Chinese Cuisine</Typography>
+                            
+                            <Paper className="cuisine-text" elavation={0}>
                             <p className="text">Chinese cuisine is an important part of Chinese culture, which includes cuisine originating from the diverse regions of China, as well as from Overseas Chinese who have settled in other parts of the world. Because of the Chinese diaspora and historical power of the country, Chinese cuisine has influenced many other cuisines in Asia, with modifications made to cater to local palates. Chinese food staples such as rice, soy sauce, noodles, tea, and tofu, and utensils such as chopsticks and the wok, can now be found worldwide.</p>
-                        
-                            <TableContainer component={Paper} style={{height:'100%', width:'90%'}}>
+                            </Paper>
+
+                         <TableContainer className="rep-cuisine" component={Paper}>
                                 <StyleTable className="chinafood" aria-label="chinafood">
                                     <TableBody>
                                         <TableRow>
@@ -295,7 +299,6 @@ class VideoDetail extends React.Component {
                                     </TableBody>
                                 </StyleTable>
                             </TableContainer>
-                        </Grid>
                     </Paper>
                 </Box>
             </React.Fragment>
@@ -308,13 +311,15 @@ class VideoDetail extends React.Component {
         {
             return ( 
             <React.Fragment>
-                <Box display='flex' style={{height:'70%'}}>
-                    <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{padding:'20px'}}>
+                 <Box display='flex'>
+                        <Paper className="title" elevation={6}>
                             <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>Filipino Cuisine</Typography>
+                            
+                            <Paper className="cuisine-text" elavation={0}>
                             <p className="text">Filipino cuisine (Filipino: lutuing Pilipino/pagkaing Pilipino) is composed of the cuisines of more than a hundred distinct ethno-linguistic groups found throughout the Philippine archipelago. However, a majority of mainstream Filipino dishes that compose Filipino cuisine are from the cuisines of the various ethnolinguistic groups and tribes of the archipelago, including the Ilocano, Pangasinan, Kapampangan, Tagalog, Bicolano, Visayan (Cebuano, Hiligaynon and Waray), Chavacano and Maranao ethno-linguistic groups. The style of food making and the food associated with it have evolved over many centuries from their Austronesian origins (shared with Malaysian and Indonesian cuisines) to a mixed cuisine of Indian, Chinese, Spanish and American influences, in line with the major waves of influence that had enriched the cultures of the archipelago, as well as others adapted to indigenous ingredients and the local palate.</p>
-                        
-                            <TableContainer component={Paper} style={{height:'100%', width:'90%'}}>
+                            </Paper>
+
+                            <TableContainer className="rep-cuisine" component={Paper}>
                                 <StyleTable className="philippinesfood" aria-label="philippinesfood">
                                     <TableBody>
                                         <TableRow>
@@ -360,8 +365,7 @@ class VideoDetail extends React.Component {
                                     </TableBody>
                                 </StyleTable>
                             </TableContainer>
-                        </Grid>
-                    </Paper>
+                      </Paper>
                 </Box>
             </React.Fragment>
         )}
@@ -370,15 +374,63 @@ class VideoDetail extends React.Component {
 
             return ( 
                 <React.Fragment>
-                    <Box display='flex' style={{height:'70vh'}}>
-                    <Paper elevation={6} style={{height:'100%', width:'100%'}}>
-                    <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{marginTop:'5%'}}>
-                        <Typography variant='subtitle2'>This is Indonesia</Typography>
+                   <Box display='flex'>
+                        <Paper className="title" elevation={6}>
+                            <Typography variant='subtitle1' style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>This is Indonesia</Typography>
                         
-                    </Grid>
-                    </Paper>
-                    </Box>
-                </React.Fragment>
+                            <Paper className="cuisine-text" elavation={0}>
+                            <p className="text">Filipino cuisine (Filipino: lutuing Pilipino/pagkaing Pilipino) is composed of the cuisines of more than a hundred distinct ethno-linguistic groups found throughout the Philippine archipelago. However, a majority of mainstream Filipino dishes that compose Filipino cuisine are from the cuisines of the various ethnolinguistic groups and tribes of the archipelago, including the Ilocano, Pangasinan, Kapampangan, Tagalog, Bicolano, Visayan (Cebuano, Hiligaynon and Waray), Chavacano and Maranao ethno-linguistic groups. The style of food making and the food associated with it have evolved over many centuries from their Austronesian origins (shared with Malaysian and Indonesian cuisines) to a mixed cuisine of Indian, Chinese, Spanish and American influences, in line with the major waves of influence that had enriched the cultures of the archipelago, as well as others adapted to indigenous ingredients and the local palate.</p>
+                            </Paper>
+
+                            <TableContainer className="rep-cuisine" component={Paper}>
+                                <StyleTable className="philippinesfood" aria-label="philippinesfood">
+                                    <TableBody>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines pinakbet receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/pina.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines tapsilog receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/tapsilog.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines puto receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/puto.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines kare-kare receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/kare.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines crispy pata receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/pata.jpg')}/>
+                                                </Button></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <Button value="philippines Ensaladang Lato receipe" onClick = { e => this.handle(e.currentTarget.value) }>
+                                                <img style={{cursor: 'pointer'}} alt="kfood" src={require('../image/philippines/lato.jpg')}/>
+                                                </Button></StyleTableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Pinakbet</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Tapsilog</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Puto</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Kare-kare</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Crispy Pata</p></StyleTableCell>
+                                            <StyleTableCell align="center">
+                                                <p className="text">Ensaladang Lato </p></StyleTableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </StyleTable>
+                            </TableContainer>
+                      </Paper>
+                </Box>
+            </React.Fragment>
                 )
             }
     

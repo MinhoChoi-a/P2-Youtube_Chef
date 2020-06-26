@@ -37,7 +37,26 @@ html {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 375px) {
+.title {
+  display: block;
+  width:100%;
+  padding: 20px;
+}
+
+.cuisine-text{
+  display: block;
+  overflow: auto;
+}
+
+.rep-cuisine{
+  display: block;
+  width: 90%;
+  padding-bottom: 0;
+
+}
+
+
+@media screen and (max-width: 415px) {
   .App-logo {
       height: 200px;
   }
@@ -45,9 +64,12 @@ html {
   .titleText {
     font-size: 18px;
   }
-}
 
-.Paper {
-  height:100%;
-  width:100%;
+  .cuisine-text {
+    height: 230px;
+  }
+
+  .title {
+    height:500px;
+  }
 }

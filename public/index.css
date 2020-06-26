@@ -55,6 +55,11 @@ html {
 
 }
 
+.listButton
+{
+  font-family:'Fredoka One';
+}
+
 
 @media screen and (max-width: 415px) {
   .App-logo {

@@ -109,60 +109,31 @@ class Icons extends React.Component {
         <div className="App">
         <AppBar position="static" style={{backgroundColor: '#C98474'}}>
           <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="Menu"
-              onClick={this.toggledrawer(true)}
-            >
-            <Typography style={{fontFamily: 'Fredoka One', color: '#3C3C3C', fontSize: '30px'}}>
-              {title}
-            </Typography>
-              
-            </IconButton>
-            <Grid
-                container
-                direction="row"
-                justify="flex-end"
-                alignItems="center"
-              >
-            <Button 
-              style={{fontFamily: 'Fredoka One', color: '#3C3C3C'}}>
-              MINHOCHOI PROJECT
+            <Button onClick={this.toggledrawer(true)} style={{outline: 'none'}}>
+              <Typography style={{fontFamily: 'Fredoka One', color: '#3C3C3C', fontSize: '30px'}}>
+                {title}
+              </Typography>
             </Button>
+            <Grid container direction="row" justify="flex-end" alignItems="center">
+              <Button style={{fontFamily: 'Fredoka One', color: '#3C3C3C', outline: 'none'}}>
+                MINHOCHOI PROJECT
+              </Button>
             </Grid>
-            </Toolbar>
-            </AppBar>
+          </Toolbar>
+        </AppBar>
 
-        <Drawer
-          anchor="left"
-          open={this.state.drawerOpened}
-          onClose={this.toggledrawer(false)}
-          ModalProps={{
-            keepMounted: true}}
-          >
+        <Drawer anchor="left" open={this.state.drawerOpened} onClose={this.toggledrawer(false)} 
+          ModalProps={{keepMounted: true}}>
         
             <div onKeyDown={this.toggledrawer(false)} style={{width:'200px', padding:'20px'}}>
-              <Grid container className="iconButton "direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
-              <Button value="KOREA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}> KOREA </Button>
-              </Grid>
-              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
-              <Button value="CANADA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}>CANADA </Button>
-              </Grid>
-              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
-              <Button value="CHINA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}>CHINA </Button>
-              </Grid>
-              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
-              <Button value="PHILIPPINES food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>PHILIPPINES </Button>
-              </Grid>
-              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
-              <Button value="INDONESIA food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>INDONESIA </Button>
-              </Grid>
-              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
-              <Button value="ITALY food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>ITALY </Button>
-              </Grid>
-              <Grid container direction="row" justify="flex-start" spacing={1} style={{width:'100%'}}>
-              <Button value="FRANCE food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>FRANCE </Button>
+              <Grid container direction="column" justify="center" alignItems="flex-start">
+                <Button value="KOREA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}> KOREA </Button>
+                <Button value="CANADA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}>CANADA </Button>
+                <Button value="CHINA food receipe" onClick = { e => this.handle(e.currentTarget.value)} style={{fontFamily:'Fredoka One'}}>CHINA </Button>
+                <Button value="PHILIPPINES food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>PHILIPPINES </Button>
+                <Button value="INDONESIA food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>INDONESIA </Button>
+                <Button value="ITALY food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>ITALY </Button>
+                <Button value="FRANCE food receipe" onClick = { e => this.handle(e.currentTarget.value) } style={{fontFamily:'Fredoka One'}}>FRANCE </Button>
               </Grid>
            </div>
         

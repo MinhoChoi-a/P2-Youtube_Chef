@@ -3,12 +3,14 @@
   font-size:32px;
   text-align: center;
   color: '#3c3c3c';
+  margin-top: 20px;
 }
 
 .titleText{
   font-family: 'Fredoka One';
   font-size: 22px;
   color: '#3c3c3c';
+
 }
 
 .text{
@@ -30,3 +32,22 @@ html {
   background: linear-gradient(90deg, rgba(201,132,116,1) 0%, rgba(199,199,199,1) 35%, rgba(255,255,255,1) 100%);
 }
 
+.App-logo {
+  height: 300px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .App-logo {
+      height: 200px;
+  }
+
+  .titleText {
+    font-size: 18px;
+  }
+}
+
+.Paper {
+  height:100%;
+  width:100%;
+}

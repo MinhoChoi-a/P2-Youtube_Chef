@@ -47,8 +47,8 @@ class App extends React.Component {
     const { selectedVideo, videos, term, size } = this.state;
     
     return(
-      <Container fixed>
-        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{maxWidth: 1920, height: '90vh'}}>
+      <Container>
+        <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{width: '100%', height: '100vh'}}>
           
           <Grid item sm={12} xs={12}>
             <Icons onFormSubmit={this.handleSubmit}/>

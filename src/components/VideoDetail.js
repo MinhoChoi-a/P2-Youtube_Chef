@@ -4,16 +4,41 @@ import ReactPlayer from 'react-player';
 
 import { Paper, Grid, Typography, Box, Button } from '@material-ui/core';
 
-import { Table, TableBody, TableCell, TableContainer, TableRow, withStyles } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableRow } from '@material-ui/core';
+
+import {makeStyles, withStyles } from '@material-ui/core';
+
+import styled from 'styled-components';
+
+import propTypes from 'prop-types';
 
 import backImage from '../image/back.jpeg';
 
-const StyleTable = withStyles({
-  
-    root: {
-      padding: 0,
-    },
-    })((props) => <Table {...props} />);
+const StyleTable = styled.div`
+      padding: 0;
+    `;
+
+    /**
+const useStyles = makeStyles({
+        root: {
+          background: (props) =>
+            props.color === 'red'
+              ? 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'
+              : 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
+          border: 0,
+          borderRadius: 3,
+          boxShadow: (props) =>
+            props.color === 'red'
+              ? '0 3px 5px 2px rgba(255, 105, 135, .3)'
+              : '0 3px 5px 2px rgba(33, 203, 243, .3)',
+          color: 'white',
+          height: 40,
+          width: 104,
+          padding: '0 30px',
+          margin: 2,
+        },
+      });
+ */   
 
 const StyleTableCell = withStyles({
 
@@ -22,7 +47,6 @@ const StyleTableCell = withStyles({
         margin:0,
         },
     })((props) => <TableCell {...props} />);
-    
 
 
 class VideoDetail extends React.Component {
@@ -53,24 +77,18 @@ class VideoDetail extends React.Component {
         if(!video) {
             return ( 
                 <React.Fragment>
-                    <Box display='flex' style={{height:'80vh', maxWidth: 1920}}>
-                        <Paper elevation={6} style={{height:'100%', width:'100%', backgroundImage: `url(${backImage})`, backgroundSize: "cover", padding:"20px"}}>
+                    <Box display='flex' style={{height:'80vh', width: '100%'}}>
+                        <Paper elevation={6} 
+                        style={{backgroundImage: `url(${backImage})`, backgroundSize: "cover", padding:"20px", textAlign:"center"}}>
                             
-                            <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{width:'100%', marginTop: '20px'}}>
-                            <p className="first">Welcome to Youtube Chef</p></Grid>
-                            
-                            <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{width:'100%', marginTop: '10px', marginBottom:-20}}>
+                            <p className="first">Welcome to Youtube Chef</p>
                             <p className="titleText">Select the country you want<br/>Click Youtube video and Try</p>
-                            </Grid>
-                            
-                            <Grid container direction="row" justify="center" alignItems="center" style={{height: '200px', marginTop: '20px'}}>
-                                <img className="App-logo" style={{height: '100%'}} alt="logo" src="logo.png"/>
-                            </Grid>
+                            <img className="App-logo" alt="logo" src="logo.png"/>
                         
                         </Paper>
                     </Box>
                 
-                    <Box display='flex' style={{position: 'realtive', maxWidth: 1920}}>
+                    <Box display='flex' style={{position: 'realtive', width: '100%'}}>
                         <Paper elevation={6} 
                         style={{height:'40px', width:'100%', marginTop: '10px'}}>
                             <Grid container style={{height: '40px', backgroundColor: '#C98474', padding: '10px', color:'white'}}>

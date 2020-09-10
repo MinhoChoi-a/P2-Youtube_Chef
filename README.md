@@ -12,7 +12,7 @@ https://youtube-chef.herokuapp.com/
 
 Also, this web app uses a several npm packages.
 -	axios (to make api call)
--	react-player (I chose thist rather than iframe since developers can set more specific state of video like 'onReady')
+-	react-player (I chose this rather than iframe since developers can set more specific state of video like 'onReady')
 -	material-ui (set overall web component style)
 -	etc.
 
